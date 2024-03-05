@@ -20,6 +20,8 @@ library Err{
     error YOU_DO_NOT_QUALIFY_FOR_THIS_AIRDROP();
     error YOU_DO_NOT_HAVE_BALANCE_YET();
     error COULD_NOT_BE_CLAIMED__TRY_AGAIN_LATER();
+    error WINNERS_ALREADY_SELECTED();
+    error ONLY_OWNER_IS_ALLOWED();
 
 
 }

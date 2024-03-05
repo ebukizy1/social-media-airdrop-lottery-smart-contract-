@@ -3,15 +3,15 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract EmaxToken is ERC20, Ownable {
-    constructor(address initialOwner)
+contract EmaxToken is ERC20{
+    constructor()
         ERC20("EmaxToken", "EMX")
-        Ownable(initialOwner)
-    {}
+    {
+        mint(msg.sender, 300000000);
+    }
 
-    function mint(address to, uint256 amount) public onlyOwner {
+    function mint(address to, uint256 amount) public  {
         _mint(to, amount);
     }
 }
